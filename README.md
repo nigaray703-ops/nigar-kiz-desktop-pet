@@ -1,5 +1,7 @@
 # Nigar Kiz Desktop Pet
 
+![Nigar Kiz Desktop Pet preview](docs/cover.png)
+
 A lightweight animated desktop companion built with Electron. Nigar Kiz is a local-only pixel pet with transparent windowing, tray controls, focus sessions, and persistent preferences.
 
 ## Features
