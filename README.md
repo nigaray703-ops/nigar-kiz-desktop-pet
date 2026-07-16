@@ -4,6 +4,77 @@
 
 A lightweight animated desktop companion built with Electron. Nigar Kiz is a local-only pixel pet with transparent windowing, tray controls, focus sessions, and persistent preferences.
 
+## Use in Codex
+
+Nigar Kiz can also be installed as a custom pet in the Codex desktop app without running the Electron desktop application.
+
+## Use as a Codex Custom Pet
+
+Nigar Kiz can be installed directly as a custom pet in the Codex desktop app.
+
+You do not need to install Node.js, npm, or Electron when using Nigar Kiz only as a Codex custom pet.
+
+### macOS Installation
+
+1. Download or clone this repository.
+
+2. Open the `assets` folder.
+
+3. Copy these two files:
+
+   ```text
+   pet.json
+   spritesheet.webp
+   ```
+
+4. Open Finder.
+
+5. Press:
+
+   ```text
+   Command + Shift + G
+   ```
+
+6. Enter the Codex custom pets directory:
+
+   ```text
+   ~/.codex/pets
+   ```
+
+7. Create a new folder named:
+
+   ```text
+   nigar-kiz
+   ```
+
+8. Paste `pet.json` and `spritesheet.webp` into the new folder.
+
+The final folder structure should be:
+
+```text
+~/.codex/pets/nigar-kiz/
+├── pet.json
+└── spritesheet.webp
+```
+
+9. Fully quit Codex by pressing:
+
+   ```text
+   Command + Q
+   ```
+
+10. Reopen Codex.
+
+11. Open:
+
+   ```text
+   Settings → Pets
+   ```
+
+12. Select **Nigar Kiz** under the custom pets section.
+
+You can then adjust the pet size from the Codex appearance settings.
+
 ## Features
 
 - Transparent, frameless, always-on-top desktop window
