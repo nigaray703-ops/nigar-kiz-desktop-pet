@@ -1,0 +1,26 @@
+{
+  "name": "nigar-kiz-desktop-pet",
+  "version": "1.0.0",
+  "description": "A lightweight animated desktop companion built with Electron.",
+  "author": "Nigar Kiz Contributors",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "test": "node --test",
+    "package:mac": "electron-builder --mac",
+    "package:mac:dir": "electron-builder --mac --dir",
+    "package:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.nicole.nigarkiz",
+    "productName": "Nigar Kiz",
+    "files": ["src/**/*", "assets/**/*", "package.json"],
+    "mac": {"category": "public.app-category.productivity"},
+    "win": {"target": "nsis"}
+  }
+}

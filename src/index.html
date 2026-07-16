@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigar Kiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="stage" aria-label="Nigar Kiz desktop companion">
+    <div id="speech" class="speech hidden" role="status"></div>
+    <button
+      id="settings-toggle"
+      class="settings-toggle"
+      type="button"
+      aria-label="Open settings"
+      aria-expanded="false"
+      aria-controls="settings-panel"
+      title="Settings"
+    >Settings</button>
+    <section id="settings-panel" class="settings-panel" aria-labelledby="settings-title" hidden>
+      <form id="settings-form">
+        <header class="panel-header">
+          <h1 id="settings-title">Nigar Kiz</h1>
+        </header>
+
+        <label class="field">
+          <span>Scale</span>
+          <select name="scale">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </label>
+
+        <label class="check"><input name="alwaysOnTop" type="checkbox" /> Always on top</label>
+        <label class="check"><input name="randomActions" type="checkbox" /> Random actions</label>
+        <label class="check"><input name="speechBubble" type="checkbox" /> Speech bubble</label>
+        <label class="check"><input name="launchAtLogin" type="checkbox" /> Launch at login</label>
+
+        <fieldset class="focus-group">
+          <legend>Focus timer</legend>
+          <label><input name="focusMinutes" type="radio" value="25" /> 25m</label>
+          <label><input name="focusMinutes" type="radio" value="45" /> 45m</label>
+          <label><input name="focusMinutes" type="radio" value="60" /> 60m</label>
+          <div class="button-row">
+            <button type="button" data-minutes="25" class="focus-button">Start 25</button>
+            <button type="button" data-minutes="45" class="focus-button">45</button>
+            <button type="button" data-minutes="60" class="focus-button">60</button>
+          </div>
+          <p id="focus-status" class="focus-status" role="status">No active focus timer</p>
+          <button id="cancel-focus" type="button">Cancel focus</button>
+        </fieldset>
+
+        <button id="reset-position" type="button">Reset position</button>
+      </form>
+    </section>
+    <div
+      id="pet"
+      class="pet"
+      role="button"
+      tabindex="0"
+      aria-label="Nigar Kiz. Press Enter or W to wave, Space or J to jump, F to focus, or Context Menu for actions."
+      title="Click: wave · Double-click: jump · Right-click: menu · W/J/F shortcuts"
+    ></div>
+  </main>
+  <script src="state-config.js"></script>
+  <script src="animation-behavior.js"></script>
+  <script src="look-direction.js"></script>
+  <script src="interaction-controller.js"></script>
+  <script src="settings-schema.js"></script>
+  <script src="pet-animator.js"></script>
+  <script src="settings-panel.js"></script>
+  <script src="focus-timer.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
