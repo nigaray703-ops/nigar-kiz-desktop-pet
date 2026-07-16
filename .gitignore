@@ -1,0 +1,28 @@
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+release/
+out/
+
+# Local app state and logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment files
+.env
+.env.*
+
+# Internal Codex task notes and generation prompts
+CODEX_PROMPT.md
+
+# Editor and OS metadata
+.idea/
+.vscode/
+Thumbs.db
